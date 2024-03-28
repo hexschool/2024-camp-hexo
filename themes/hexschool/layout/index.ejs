@@ -1,1 +1,342 @@
-<%- partial('_partial/archive', {pagination: 2, index: true}) %>
+<main>
+  <div class="container-fluid">
+    <div class="row flex-md-row-reverse mb-7 mb-md-9">
+      <div class="col-12 col-md-7 px-0 overflow-hidden">
+        <picture>
+          <source media="(min-width: 768px)" srcset="images/hero-lg.png">
+          <img class="w-100" src="images/hero-sm.png" alt="hero banner">
+        </picture>
+      </div>
+      <div class="col-10 col-md-4 mx-auto mx-md-0">
+        <div class="d-flex flex-column justify-content-center align-items-center align-items-md-start h-100">
+          <h1 class="mb-4 text-primary-700 fw-semibold">Hi！我是 Noel</h1>
+          <p class="text-center text-md-start text-primary-600 fs-5 mb-0">具有 10 年經驗的<mark class="mark text-primary-600">資深 UI 設計師</mark>兼<mark class="mark text-primary-600">前端工程師</mark></p>
+          <p class="text-center text-md-start text-primary-600 fs-5">技術雙修並行，熱衷於優化使用者的網頁體驗</p>
+          <p class="text-center text-md-start text-primary-400 mb-9">WEB DEVELOPMENT / BRANDING / UI / UX / APP DESIGN</p>
+          <div class="d-flex gap-3">
+            <a class="icon-link link-primary-600 px-2 fs-1" href="#">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a class="icon-link link-primary-600 px-2 fs-1" href="#">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a class="icon-link link-primary-600 px-2 fs-1" href="#">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <section>
+    <h2 class="title-deco py-7 py-md-9 text-center text-primary-700 tracking-wide fw-semibold">作品介紹</h2>
+    <div
+      class="pt-9"
+      style="background-image: url('images/homepage-work1-bg.png');background-repeat: no-repeat;background-position: center;background-size: cover;"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-xl-7">
+            <img class="img-fluid" src="images/homepage-work1.png" alt="work1">
+          </div>
+          <div class="col-12 col-md-6 col-xl-5 d-none d-md-flex flex-md-column justify-content-center">
+            <div class="px-7 py-9 bg-white-overlay rounded-5">
+              <h3 class="mb-2 text-primary-50">星際旅行訂票平台</h3>
+              <p class="mb-4 fs-6 text-primary-50">悠遊宇宙的夢想，從這裡開始實現</p>
+              <div class="pb-7 mb-7 border-bottom border-white">
+                <span class="badge mb-2 me-2 fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">網頁設計</span>
+                <span class="badge mb-2 me-2 fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">響應式設計</span>
+                <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">ＷordPress</span>
+              </div>
+              <div class="d-flex justify-content-center">
+                <a
+                  class="btn btn-lg px-6 py-3 fs-5 fw-bold text-primary-50 bg-primary-900 icon-link icon-link-hover link-primary-500"
+                  href="/collection"
+                >
+                  完整介紹
+                  <span class="bi material-symbols-outlined align-text-bottom">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-md-none pt-4 pb-8 text-center">
+      <h3 class="mb-2">星際旅行訂票平台</h3>
+      <p class="mb-3 fs-6 text-primary-600">悠遊宇宙的夢想，從這裡開始實現</p>
+      <div class="mb-4">
+        <span class="badge mb-3 me-2 fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">網頁設計</span>
+        <span class="badge mb-3 me-2 fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">響應式設計</span>
+        <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">Bootstrap</span>
+      </div>
+      <a
+        class="btn btn-sm px-3 py-2 fs-6 fw-bold text-primary-50 bg-primary-900"
+        href="/collection"
+      >
+        完整介紹
+        <span class="material-symbols-outlined align-top">arrow_forward</span>
+      </a>
+    </div>
+
+    <div
+      class="position-relative py-9"
+      style="background-image: url('images/homepage-work2-lg.png');background-repeat: no-repeat;background-position: center;
+      background-size: cover;"
+    >
+      <div class="container">
+        <div class="row">
+          <div
+            class="d-none d-md-block col-md-6 position-absolute top-0 start-0 h-100"
+            style="background-color: #0A101380;"
+          >
+          </div>
+          <div
+            class="col-12 col-md-6 col-xl-5 d-none d-md-flex flex-md-column justify-content-center"
+            
+          >
+            <div class="px-7 py-9 bg-white-overlay rounded-5">
+              <h3 class="mb-2 text-primary-50">理財APP</h3>
+              <p class="mb-4 fs-6 text-primary-50">連動帳戶與行動支付，讓 AI 提供您最好的理財建議</p>
+              <div class="pb-7 mb-7 border-bottom border-white">
+                <span class="badge me-2 fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">APP設計</span>
+                <span class="badge me-2 fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">iOS</span>
+                <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">React</span>
+              </div>
+              <div class="d-flex justify-content-center">
+                <a
+                  class="btn btn-lg px-6 py-3 fs-5 fw-bold text-primary-50 bg-primary-900 icon-link icon-link-hover link-primary-500"
+                  href="/collection"
+                >
+                  完整介紹
+                  <span class="bi material-symbols-outlined align-text-bottom">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 invisible">
+            <img class="img-fluid" src="images/homepage-work1.png" alt="work1">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-md-none pt-4 pb-8 text-center">
+      <h3 class="mb-2">理財APP</h3>
+      <p class="mb-3 fs-6 text-primary-600">連動帳戶與行動支付，讓 AI 提供您最好的理財建議</p>
+      <div class="mb-4">
+        <span class="badge me-2 fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">APP設計</span>
+        <span class="badge me-2 fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">iOS</span>
+        <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">React</span>
+      </div>
+      <a
+        class="btn btn-sm px-3 py-2 fs-6 fw-bold text-primary-50 bg-primary-900"
+        href="/collection"
+      >
+        完整介紹
+        <span class="material-symbols-outlined align-top">arrow_forward</span>
+      </a>
+    </div>
+
+    <div
+      class="position-relative py-9"
+      style="background-image: url('images/homepage-work3-bg.png');background-repeat: no-repeat;background-position: center;background-size: cover;"
+    >
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-12 position-absolute top-0 start-0 bottom-0 end-0 h-100"
+            style="background-color: #0D0C0780;"
+          ></div>
+          <div class="col-12 col-md-6 col-xl-7 z-1">
+            <img class="img-fluid" src="images/homepage-work3.png" alt="work1">
+          </div>
+          <div class="col-12 col-md-6 col-xl-5 d-none d-md-flex flex-md-column justify-content-center">
+            <div class="px-7 py-9 bg-white-overlay rounded-5">
+              <h3 class="mb-2 text-primary-50">醫美診所官網</h3>
+              <p class="mb-4 fs-6 text-primary-50">永保青春的秘密，從粹究開始</p>
+              <div class="pb-7 mb-7 border-bottom border-white">
+                <span class="badge mb-2 me-2 fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">網頁設計</span>
+                <span class="badge mb-2 me-2 fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">響應式設計</span>
+                <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">Bootstrap</span>
+              </div>
+              <div class="d-flex justify-content-center">
+                <a
+                  class="btn btn-lg px-6 py-3 fs-5 fw-bold text-primary-50 bg-primary-900 icon-link icon-link-hover link-primary-500"
+                  href="/collection"
+                >
+                  完整介紹
+                  <span class="bi material-symbols-outlined align-text-bottom">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-md-none pt-4 pb-8 text-center">
+      <h3 class="mb-2">醫美診所官網</h3>
+      <p class="mb-3 fs-6 text-primary-600">永保青春的秘密，從粹究開始</p>
+      <div class="mb-4">
+        <span class="badge mb-3 me-2 fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">網頁設計</span>
+        <span class="badge mb-3 me-2 fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">響應式設計</span>
+        <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">ＷordPress</span>
+      </div>
+      <a
+        class="btn btn-sm px-3 py-2 fs-6 fw-bold text-primary-50 bg-primary-900"
+        href="/collection"
+      >
+        完整介紹
+        <span class="material-symbols-outlined align-top">arrow_forward</span>
+      </a>
+    </div>
+  </section>
+
+  <section
+    class="pt-7 pb-7 pb-md-9"
+    style="background-image: url('images/homepage-services-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;"
+  >
+    <div class="container px-6 px-md-4">
+      <h2 class="title-deco py-7 py-md-9 text-center text-primary-700 tracking-wide fw-semibold">服務項目</h2>
+      <div class="row row-gap-4 mb-7 mb-md-9">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="bg-service d-flex flex-column justify-content-center align-items-center rounded-4">
+            <div class="position-absolute start-0 end-0 top-0 bottom-0 d-flex flex-column justify-content-center align-items-center">
+              <img class="mb-4" src="images/service-item-visual.svg" alt="visual design">
+              <h3 class="text-primary-50">平面設計</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="bg-service d-flex flex-column justify-content-center align-items-center rounded-4">
+            <div class="position-absolute start-0 end-0 top-0 bottom-0 d-flex flex-column justify-content-center align-items-center">
+              <img class="mb-4" src="images/service-item-ui.svg" alt="ui design">
+              <h3 class="text-primary-50">UI 設計</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="bg-service d-flex flex-column justify-content-center align-items-center rounded-4">
+            <div class="position-absolute start-0 end-0 top-0 bottom-0 d-flex flex-column justify-content-center align-items-center">
+              <img class="mb-4" src="images/service-item-html&css.svg" alt="html and css">
+              <h3 class="text-primary-50">切版服務</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="bg-service d-flex flex-column justify-content-center align-items-center rounded-4">
+            <div class="position-absolute start-0 end-0 top-0 bottom-0 d-flex flex-column justify-content-center align-items-center">
+              <img class="mb-4" src="images/service-item-front-end.svg" alt="visual design">
+              <h3 class="text-primary-50">前端開發</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mb-4 mb-md-7 fs-3 fw-semibold text-center text-primary-700">想要合作或瞭解更多？</p>
+      <div class="d-flex justify-content-center pb-7 pb-md-9">
+        <a
+          class="d-none d-md-block btn btn-lg px-6 py-3 fs-5 fw-bold text-primary-50 bg-primary-900 icon-link icon-link-hover link-primary-500"
+          href="/service"
+        >
+          詳細內容與合作流程
+          <span class="bi material-symbols-outlined align-text-bottom">arrow_forward</span>
+        </a>
+        <a
+          class="d-md-none btn px-3 py-2 fw-bold text-primary-50 bg-primary-900"
+          href="/service"
+        >
+          詳細內容與合作流程
+          <span class="material-symbols-outlined align-text-bottom">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container pb-7 pb-md-9">
+    <h2 class="title-deco py-7 py-md-9 mt-7 mt-md-9 text-center text-primary-700 tracking-wide fw-semibold">精選文章</h2>
+    <div class="row row-gap-5 mb-7">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card border-0">
+          <img src="images/article-image1.png" class="card-img-top rounded-3" alt="article-1">
+          <div class="card-body">
+            <h5 class="card-title mb-3 text-primary-700">Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">UI/UX 新知</span>
+              <p class="card-text fs-6 text-primary-600"><small class="text-body-secondary">2024/02/10</small></p>
+            </div>
+            <a class="stretched-link" href="/post"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card border-0">
+          <img src="images/article-image2.png" class="card-img-top rounded-3" alt="article-2">
+          <div class="card-body">
+            <h5 class="card-title mb-3 text-primary-700">給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (下)</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">UI/UX 新知</span>
+              <p class="card-text fs-6 text-primary-600"><small class="text-body-secondary">2023/11/20</small></p>
+            </div>
+            <a class="stretched-link" href="/post"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card border-0">
+          <img src="images/article-image3.png" class="card-img-top rounded-3" alt="article-3">
+          <div class="card-body">
+            <h5 class="card-title mb-3 text-primary-700">給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (上)</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">UI/UX 新知</span>
+              <p class="card-text fs-6 text-primary-600"><small class="text-body-secondary">2023/10/18</small></p>
+            </div>
+            <a class="stretched-link" href="/post"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-md-flex justify-content-center gap-3 mb-9">
+      <span
+        class="rounded-circle bg-primary-900"
+        style="width: 12px;
+        height: 12px;"
+      >
+      </span>
+      <span
+        class="rounded-circle bg-primary-300"
+        style="width: 12px;
+        height: 12px;"
+      >
+      </span>
+      <span
+        class="rounded-circle bg-primary-300"
+        style="width: 12px;
+        height: 12px;"
+      >
+      </span>
+      <span
+        class="rounded-circle bg-primary-300"
+        style="width: 12px;
+        height: 12px;"
+      >
+      </span>
+      <span
+        class="rounded-circle bg-primary-300"
+        style="width: 12px;
+        height: 12px;"
+      >
+      </span>
+    </div>
+    <div class="d-flex d-md-none justify-content-center mb-7">
+      <a
+        class="btn btn-lg fs-6 fw-bold text-primary-50 bg-primary-900"
+        href="/blog"
+      >
+        更多文章
+        <span class="material-symbols-outlined align-text-bottom">arrow_forward</span>
+      </a>
+    </div>
+  </section>
+</main>
