@@ -257,45 +257,33 @@
   <section class="container pb-7 pb-md-9">
     <h2 class="title-deco py-7 py-md-9 mt-7 mt-md-9 text-center text-primary-700 tracking-wide fw-semibold">精選文章</h2>
     <div class="row row-gap-5 mb-7">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card border-0">
-          <img src="/images/article-image1.png" class="card-img-top rounded-3" alt="article-1">
-          <div class="card-body">
-            <h5 class="card-title mb-3 text-primary-700">Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)</h5>
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">UI/UX 新知</span>
-              <p class="card-text fs-6 text-primary-600"><small class="text-body-secondary">2024/02/10</small></p>
+      <% const limit = 3 %>
+      <% page.posts.slice(0, limit).each((post) => { %>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card border-0">
+            <img src="<%= post.cover %>" class="card-img-top rounded-3" alt="article-1">
+            <div class="card-body">
+              <h5 class="card-title mb-3 text-primary-700"><%= post.title %></h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <%- list_tags(post.tags, {
+                  show_count: false,
+                  amount: 2,
+                  style: 'list',
+                  separator: '',
+                  class: {
+                    ul: 'd-flex gap-2 mb-0 overflow-x-hidden list-unstyled',
+                    a: 'badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4 text-decoration-none '
+                  }
+                }) %>
+                
+                <p class="card-text fs-6 text-primary-600"><small class="text-body-secondary"><%= date(post.date, 'YYYY/MM/DD') %></small></p>
+              </div>
+              <a class="stretched-link" href="/posts/<%= post.title %>"></a>
             </div>
-            <a class="stretched-link" href="/post"></a>
           </div>
         </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card border-0">
-          <img src="/images/article-image2.png" class="card-img-top rounded-3" alt="article-2">
-          <div class="card-body">
-            <h5 class="card-title mb-3 text-primary-700">給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (下)</h5>
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">UI/UX 新知</span>
-              <p class="card-text fs-6 text-primary-600"><small class="text-body-secondary">2023/11/20</small></p>
-            </div>
-            <a class="stretched-link" href="/post"></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card border-0">
-          <img src="/images/article-image3.png" class="card-img-top rounded-3" alt="article-3">
-          <div class="card-body">
-            <h5 class="card-title mb-3 text-primary-700">給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (上)</h5>
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">UI/UX 新知</span>
-              <p class="card-text fs-6 text-primary-600"><small class="text-body-secondary">2023/10/18</small></p>
-            </div>
-            <a class="stretched-link" href="/post"></a>
-          </div>
-        </div>
-      </div>
+      <% }) %>
+
     </div>
     <div class="d-none d-md-flex justify-content-center gap-3 mb-9">
       <span
