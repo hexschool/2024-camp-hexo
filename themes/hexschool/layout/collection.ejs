@@ -35,9 +35,6 @@
   </div>
   <div class="container py-7 py-md-9 mt-7 mt-md-9">
     <ul class="row row-gap-9 mb-8 mb-md-9 list-unstyled">
-      <!-- <% for (var link in site.data.mydata) { %>
-        <a href="<%= site.data.mydata[link] %>"> <%= link %> </a>
-      <% } %> -->
       <% for (const collectionKey in site.data.collections) { %>
         <% const collection = site.data.collections[collectionKey] %>
           <li class="col-12 col-md-6">
