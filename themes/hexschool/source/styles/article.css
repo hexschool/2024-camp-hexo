@@ -1,11 +1,25 @@
+.article-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
 .article-container h2 {
   font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-container h3 {
+  font-size: 1.25rem;
   margin-bottom: 1rem;
 }
 
 .article-container p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
+}
+
+.article-container img {
+  max-width: 100%;
 }
 
 @media (min-width: 992px) {
