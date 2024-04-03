@@ -2,6 +2,6 @@
 title: {{ title }}
 subtitle:
 date: {{ date }}
-cover:
+cover: /images/default-cover.png
 tags:
 ---
