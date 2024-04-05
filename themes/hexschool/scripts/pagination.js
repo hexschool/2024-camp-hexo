@@ -1,3 +1,26 @@
+// Generate blog page
+const pagination = require('hexo-pagination');
+
+hexo.extend.generator.register('blog', blogGenerator);
+
+function blogGenerator(locals) {
+    const config = this.config;
+    const posts = locals.posts.sort(config.index_generator.order_by);
+
+    posts.data.sort((a, b) => (b.sticky || 0) - (a.sticky || 0));
+
+    const path =  config.blog_path || '/blog';
+
+    return pagination(path, posts, {
+        perPage: config.blog_per_page || 10,
+        layout: ['blog'],
+        format: '%d/',  // output path
+        data: {}
+    });
+}
+
+
+// Custom paginator
 const hexo_util_1 = require("hexo-util");
 
 hexo.extend.helper.register('pagination', paginationHelper);
@@ -6,7 +29,7 @@ const url_for = hexo.extend.helper.get('url_for').bind(hexo);
 
 const createLink = (options, ctx) => {
     const { base, format } = options;
-    return (i) => url_for(i === 1 ? base : base + format.replace('%d', String(i)));
+    return (i) => url_for(i === 1 ? base : '' + format.replace('%d', String(i)));
 };
 const createPageTag = (options, ctx) => {
     const link = createLink(options, ctx);
@@ -68,7 +91,7 @@ function paginationHelper(options = {}) {
     options = Object.assign({
         base: this.page.base || '',
         current: this.page.current || 0,
-        format: `${this.config.pagination_dir}/%d/`,
+        format: `blog/%d/`,
         total: this.page.total || 1,
         end_size: 1,
         mid_size: 2,

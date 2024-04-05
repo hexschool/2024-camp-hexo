@@ -8,6 +8,10 @@ menu:
 rss: /atom.xml
 banner: "images/banner.jpg"
 
+# Blog pagination
+blog_per_page: 10
+blog_path: /blog
+
 # Content
 excerpt_link: Read More
 fancybox: true
