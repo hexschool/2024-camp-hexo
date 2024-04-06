@@ -1,7 +1,7 @@
 <main>
   <section class="container pb-7 pb-md-9">
     <div class="py-7 py-lg-9 mt-lg-9">
-      <h2 class="title-deco mb-3 mb-lg-4 text-center text-primary-700 tracking-wide fw-semibold"><%= page.title %></h2>
+      <h2 class="title-deco mb-3 mb-lg-4 text-center text-primary-700 tracking-wide fw-semibold">部落格</h2>
       <p class="mb-0 text-center text-primary-500"><%= page.subtitle %></p>
     </div>
     <div class="row flex-row-reverse mb-lg-9">
@@ -9,7 +9,11 @@
         <%- partial('_partial/sidebar') %>
       </div>
 
-      <%- list_blog_posts() %>
+      <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        <% page.posts.each((post) => { %>
+          <%- partial('_partial/blog-post.ejs', {post: post, index: true}) %>
+        <% }) %>
+      </ul>
     </div>
 
     <nav class="mb-7 mb-md-9" aria-label="Page navigation">
