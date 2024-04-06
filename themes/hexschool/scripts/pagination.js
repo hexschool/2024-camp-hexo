@@ -4,15 +4,15 @@ const pagination = require('hexo-pagination');
 hexo.extend.generator.register('blog', blogGenerator);
 
 function blogGenerator(locals) {
-    const config = this.config;
-    const posts = locals.posts.sort(config.index_generator.order_by);
+    const config = this.theme.config;
+    const posts = locals.posts.sort(config.blog_generator.order_by);
 
     posts.data.sort((a, b) => (b.sticky || 0) - (a.sticky || 0));
 
-    const path =  config.blog_path || '/blog';
-
+    const path =  config.blog_generator.path || '/blog';
+    // console.log(this.theme);
     return pagination(path, posts, {
-        perPage: config.blog_per_page || 10,
+        perPage: config.blog_generator.per_page || 10,
         layout: ['blog'],
         format: '%d/',  // output path
         data: {}
