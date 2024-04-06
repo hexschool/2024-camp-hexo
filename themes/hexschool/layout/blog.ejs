@@ -20,8 +20,8 @@
       <ul class="pagination justify-content-center gap-3">
         <%- pagination({
           escape: false,
-          current: 1,
-          total: 3
+          current: page.current,
+          total: page.total
         }) %>
       </ul>
     </nav>
