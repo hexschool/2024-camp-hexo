@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  bootstrap: ^5.3.3
   hexo: ^7.0.0
   hexo-generator-archive: ^2.0.0
   hexo-generator-category: ^2.0.0
@@ -15,6 +16,7 @@ specifiers:
   hexo-util: ^3.3.0
 
 dependencies:
+  bootstrap: 5.3.3
   hexo: 7.1.1
   hexo-generator-archive: 2.0.0
   hexo-generator-category: 2.0.0
@@ -146,6 +148,12 @@ packages:
 
   /bluebird/3.7.2:
     resolution: {integrity: sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==}
+    dev: false
+
+  /bootstrap/5.3.3:
+    resolution: {integrity: sha512-8HLCdWgyoMguSO9o+aH+iuZ+aht+mzW0u3HIMzVu7Srrpv7EBBxTnrFlSCskwdY1+EOFQSm7uMJhNQHkdPcmjg==}
+    peerDependencies:
+      '@popperjs/core': ^2.11.8
     dev: false
 
   /brace-expansion/1.1.11:
