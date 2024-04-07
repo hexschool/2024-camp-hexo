@@ -10,7 +10,7 @@ function blogGenerator(locals) {
     posts.data.sort((a, b) => (b.sticky || 0) - (a.sticky || 0));
 
     const path =  config.blog_generator.path || '/blog';
-    // console.log(this.theme);
+
     return pagination(path, posts, {
         perPage: config.blog_generator.per_page || 10,
         layout: ['blog'],
