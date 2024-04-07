@@ -4,6 +4,17 @@
   <%
   var title = page.title;
 
+  switch(page.base) {
+    case '':
+      title = '首頁';
+      break;
+    case '/blog/':
+      title = '部落格';
+      break;
+    default:
+      break;
+  }
+
   if (is_archive()){
     title = __('archive_a');
 
