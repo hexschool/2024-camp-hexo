@@ -1,0 +1,79 @@
+$primary-50: #FFFFFF !default;
+$primary-100: #FAFAFA !default;
+$primary-200: #F1F1F1 !default;
+$primary-300: #E9E9E9 !default;
+$primary-400: #C1C1C1 !default;
+$primary-500: #919191 !default;
+$primary-600: #5B5B5B !default;
+$primary-700: #3B3B3B !default;
+$primary-800: #1E1E1E !default;
+$primary-900: #000 !default;
+
+$primary-colors: (
+  "primary-50": $primary-50,
+  "primary-100": $primary-100,
+  "primary-200": $primary-200,
+  "primary-300": $primary-300,
+  "primary-400": $primary-400,
+  "primary-500": $primary-500,
+  "primary-600": $primary-600,
+  "primary-700": $primary-700,
+  "primary-800": $primary-800,
+  "primary-900": $primary-900
+) !default;
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          (
+            $primary-colors
+          ),
+        ),
+      ),
+    ),
+    "background-color": map-merge(
+      map-get($utilities, "background-color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "background-color"), "values"),
+          (
+            $primary-colors
+          ),
+        ),
+      ),
+    ),
+    "border-color": map-merge(
+      map-get($utilities, "border-color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "border-color"), "values"),
+          (
+            $primary-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);
+
+// link color classes
+@each $color, $value in $primary-colors {
+  .link-#{$color} {
+    color: $value if($enable-important-utilities, !important, null);
+    text-decoration-color: RGBA($value, var(--#{$prefix}link-underline-opacity, 1)) if($enable-important-utilities, !important, null);
+
+    @if $link-shade-percentage != 0 {
+      &:hover,
+      &:focus {
+        $hover-color: if(color-contrast($value) == $color-contrast-light, shade-color($value, $link-shade-percentage), tint-color($value, $link-shade-percentage));
+        color: RGBA(#{to-rgb($hover-color)}, var(--#{$prefix}link-opacity, 1)) if($enable-important-utilities, !important, null);
+        text-decoration-color: RGBA(to-rgb($hover-color), var(--#{$prefix}link-underline-opacity, 1)) if($enable-important-utilities, !important, null);
+      }
+    }
+  }
+}
