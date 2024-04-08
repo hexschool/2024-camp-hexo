@@ -30,7 +30,7 @@ $ hexo new post <your-post-name>
 $ hexo generate
 ```
 
-**清除靜態檔案（Generate static files）**
+**清除靜態檔案（Clear static files）**
 ```sh
 $ hexo clean
 ```
