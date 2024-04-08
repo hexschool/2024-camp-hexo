@@ -63,4 +63,5 @@ MacOS 使用 cmd + s，Windows 使用 ctrl + s
 
 
 ## 更多資訊
+- [hexschool 主題相關設定與介紹](https://github.com/hexschool/2024-camp-hexo/blob/main/themes/hexschool/README.md)
 - [Hexo 相關指令](https://hexo.io/zh-tw/docs/commands)
