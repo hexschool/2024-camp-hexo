@@ -17,6 +17,7 @@ _config.yml
 ## 主題相關設定（Configuration）
 
 在專案根目錄下的 `_config.hexschool.yml` 直接修改變數的值
+
 所有的變數如下：
 
 ``` yml
