@@ -10,8 +10,15 @@
 ## 快速開始
 
 **專案設置（Project setup）**
+
+將專案複製到本地端
 ```sh
 $ git clone git@github.com:hexschool/2024-camp-hexo.git
+```
+
+基礎套件安裝
+```sh
+$ cd 2024-camp-hexo
 $ npm install
 ```
 
