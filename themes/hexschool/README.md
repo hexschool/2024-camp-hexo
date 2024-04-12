@@ -78,6 +78,8 @@ favicon: /images/logo.svg
 │   ├── _custom.scss       覆蓋以及自訂樣式
 │   ├── _variable.scss     主要的變數
 │   └── all.scss           進入點
+└── js
+    └── swiper.js       swiper config
 ```
 
 ## 外掛（Plugins）
