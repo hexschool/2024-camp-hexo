@@ -7,18 +7,20 @@
       <article class="article-container col-12 col-lg-8 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0 text-primary-700" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
         <nav class="mb-3 mb-lg-7" aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item text-primary-500">
-              <%- list_tags(page.tags, {
-                show_count: false,
-                amount: 1,
-                style: '',
-                separator: '',
-                class: {
-                  a: 'text-primary-500 text-decoration-none'
-                }
-              }) %>
+            <% if (page.tags.length > 0) { %>
+              <li class="breadcrumb-item text-primary-500">
+                <%- list_tags(page.tags, {
+                  show_count: false,
+                  amount: 1,
+                  style: '',
+                  separator: '',
+                  class: {
+                    a: 'text-primary-500 text-decoration-none'
+                  }
+                }) %>
 
-            </li>
+              </li>
+            <% } %>
             <li class="breadcrumb-item text-primary-500 active" aria-current="page"><%= date(page.date, 'YYYY/MM/DD') %> 發佈</li>
           </ol>
         </nav>
