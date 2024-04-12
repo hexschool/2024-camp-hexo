@@ -40,32 +40,30 @@
   <section class="container px-6 px-lg-0 pt-7 pb-7 pb-lg-9 mt-lg-7 mb-7 mb-lg-9 border-top border-primary-400">
     <h3 class="mb-7 text-center text-lg-start text-primary-700">相關文章</h3>
     <div class="row row-gap-5">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card border-0">
-          <img src="/images/article-image1.png" class="card-img-top rounded-3" alt="article-1">
-          <div class="card-body">
-            <h5 class="card-title mb-3 text-primary-700">Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)</h5>
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">UI/UX 新知</span>
-              <p class="card-text fs-6 text-primary-600"><small class="text-body-secondary">2024/02/10</small></p>
+      <% if (page.tags && page.tags.length) { %>
+        <% page.tags.forEach(function(tag) { %>
+          <% site.tags.findOne({ name: tag.name }).posts.filter(function(item) {
+            return item.title !== page.title;
+          }).sort('date', -1).slice(0, 3).each(function(item) { %>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card border-0">
+                <%- image_tag(item.cover, {class: "img-fluid card-img-top rounded-3"}) %>
+                <div class="card-body">
+                  <h5 class="card-title mb-3 text-primary-700"><%= item.title %></h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <% item.tags.each(function(tag) {%>
+                      <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4"><%= tag.name %></span>
+                    <% }) %>
+                    <p class="card-text fs-6 text-primary-600"><small class="text-body-secondary"><%= date(item.date, 'YYYY/MM/DD') %></small></p>
+                  </div>
+                  <a class="stretched-link" href="<%- url_for(item.path) %>"></a>
+                </div>
+              </div>
             </div>
-            <a class="stretched-link" href="#"></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card border-0">
-          <img src="/images/article-image7.png" class="card-img-top rounded-3" alt="article-7">
-          <div class="card-body">
-            <h5 class="card-title mb-3 text-primary-700">Vision Pro 來了！UIUX 設計師的未來在哪裡？</h5>
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">UI/UX 新知</span>
-              <p class="card-text fs-6 text-primary-600"><small class="text-body-secondary">2023/07/10</small></p>
-            </div>
-            <a class="stretched-link" href="#"></a>
-          </div>
-        </div>
-      </div>
+          <% }); %>
+        <% }); %>
+      <% } %>
     </div>
+
   </section>
 </main>
