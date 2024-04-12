@@ -256,67 +256,42 @@
 
   <section class="container pb-7 pb-md-9">
     <h2 class="title-deco py-7 py-md-9 mt-7 mt-md-9 text-center text-primary-700 tracking-wide fw-semibold">精選文章</h2>
-    <div class="row row-gap-5 mb-7">
-      <% const limit = 3 %>
-      <% page.posts.slice(0, limit).each((post) => { %>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card border-0">
-            <img src="<%= post.cover %>" class="card-img-top rounded-3" alt="article-1">
-            <div class="card-body">
-              <h5 class="card-title mb-3 text-primary-700"><%= post.title %></h5>
-              <div class="d-flex justify-content-between align-items-center">
-                <%- list_tags(post.tags, {
-                  show_count: false,
-                  amount: 2,
-                  style: 'list',
-                  separator: '',
-                  class: {
-                    ul: 'd-flex gap-2 mb-0 overflow-x-hidden list-unstyled',
-                    a: 'badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4 text-decoration-none '
-                  }
-                }) %>
-                
-                <p class="card-text fs-6 text-primary-600"><small class="text-body-secondary"><%= date(post.date, 'YYYY/MM/DD') %></small></p>
-              </div>
-              <a class="stretched-link" href="<%= post.path %>"></a>
-            </div>
-          </div>
-        </div>
-      <% }) %>
 
-    </div>
-    <div class="d-none d-md-flex justify-content-center gap-3 mb-9">
-      <span
-        class="rounded-circle bg-primary-900"
-        style="width: 12px;
-        height: 12px;"
-      >
-      </span>
-      <span
-        class="rounded-circle bg-primary-300"
-        style="width: 12px;
-        height: 12px;"
-      >
-      </span>
-      <span
-        class="rounded-circle bg-primary-300"
-        style="width: 12px;
-        height: 12px;"
-      >
-      </span>
-      <span
-        class="rounded-circle bg-primary-300"
-        style="width: 12px;
-        height: 12px;"
-      >
-      </span>
-      <span
-        class="rounded-circle bg-primary-300"
-        style="width: 12px;
-        height: 12px;"
-      >
-      </span>
-    </div>
+      <div class="row row-gap-5 mb-7">
+        <div class="swiper">
+          <div class="swiper-wrapper mb-9">
+          <% const limit = 5 %>
+          <% page.posts.slice(0, limit).each((post) => { %>
+            <div class="swiper-slide col-12 col-md-6 col-lg-4">
+              <div class="card border-0">
+                <img src="<%= post.cover %>" class="card-img-top rounded-3" alt="article-1">
+                <div class="card-body">
+                  <h5 class="card-title mb-3 text-primary-700"><%= post.title %></h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <%- list_tags(post.tags, {
+                      show_count: false,
+                      amount: 2,
+                      style: 'list',
+                      separator: '',
+                      class: {
+                        ul: 'd-flex gap-2 mb-0 overflow-x-hidden list-unstyled',
+                        a: 'badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4 text-decoration-none '
+                      }
+                    }) %>
+                    
+                    <p class="card-text fs-6 text-primary-600"><small class="text-body-secondary"><%= date(post.date, 'YYYY/MM/DD') %></small></p>
+                  </div>
+                  <a class="stretched-link" href="<%= post.path %>"></a>
+                </div>
+              </div>
+            </div>
+          <% }) %>
+
+          </div>
+          <div class="swiper-pagination d-none d-md-block"></div>
+        </div>
+      </div>
+
     <div class="d-flex d-md-none justify-content-center mb-7">
       <a
         class="btn btn-lg fs-6 fw-bold text-primary-50 bg-primary-900"
